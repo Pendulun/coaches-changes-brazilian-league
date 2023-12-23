@@ -7,3 +7,8 @@ COACHES_FIRED_WIKIS_DOWNLOAD_DIR_PATH = pathlib.Path(
     "../data/html/coaches_fired")
 COACHES_FIRED_WIKIS_DOWNLOAD_PATH_FMT = str(
     COACHES_FIRED_WIKIS_DOWNLOAD_DIR_PATH) + "/campeonato_{}.html"
+
+COACHES_FIRED_WIKIS_TABLE_DIR_PATH = pathlib.Path(
+    "../data/html/coaches_fired_tables")
+COACHES_FIRED_WIKIS_TABLE_PATH_FMT = str(
+    COACHES_FIRED_WIKIS_TABLE_DIR_PATH) + "/campeonato_{}.html"
