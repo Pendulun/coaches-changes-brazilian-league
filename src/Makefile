@@ -1,2 +1,5 @@
 download_coaches_fired:
-	python download/coaches_fired_wikis.py
+	python download_coaches_fired_wikis.py
+
+process_coaches_fired:
+	python process/process_coaches_fired_htmls.py
