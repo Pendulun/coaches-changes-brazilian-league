@@ -1,0 +1,2 @@
+download_coaches_fired:
+	python download/coaches_fired_wikis.py
