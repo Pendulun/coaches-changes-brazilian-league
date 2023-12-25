@@ -3,3 +3,6 @@ download_coaches_fired:
 
 extract_coaches_fired_tables:
 	python extract_coaches_fired_tables.py
+
+process_coaches_fired_tables:
+	python process_coaches_fired_tables.py
