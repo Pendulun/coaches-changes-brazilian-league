@@ -6,3 +6,6 @@ extract_coaches_fired_tables:
 
 process_coaches_fired_tables:
 	python process_coaches_fired_tables.py
+
+treat_coaches_fired_tables:
+	python treat_coaches_fired_tables.py
