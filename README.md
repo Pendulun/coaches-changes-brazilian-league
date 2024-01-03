@@ -1,7 +1,7 @@
 
 # coaches-changes-brazilian-league
 
-Code used to scrape web data on coaches changed on the brazilian football league from wikipedia
+Code used to scrape web data on coaches changed on the brazilian football league from wikipedia. See it at [Kaggle](https://www.kaggle.com/datasets/pendulun/coaches-changes-brazilian-football-first-division).
 
   
 
