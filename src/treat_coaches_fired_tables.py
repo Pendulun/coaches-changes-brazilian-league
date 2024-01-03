@@ -181,8 +181,8 @@ def treat_2021_to_2023(df: pd.DataFrame, year: int) -> pd.DataFrame:
     df["Última partida"] = df['Última partida'].apply(normalize_team_name)
 
     target_match_results_cols = [
-        "Last Match Result", "Last Match at Home", "Team score", "Rival score",
-        "Rival Team"
+        "Last Match Result", "Last Match at Home", "Last Match Team score",
+        "Last Match Rival score", "Last Match Rival Team"
     ]
     df[target_match_results_cols] = df[['Última partida', 'Clube']].apply(
         parse_last_match_result, args=(target_match_results_cols, ), axis=1)
@@ -206,8 +206,6 @@ def treat_2021_to_2023(df: pd.DataFrame, year: int) -> pd.DataFrame:
     df.drop(["Ref.", "Data", "Última partida"], axis=1, inplace=True)
     df.sort_values(by=["Month Out", "Day Out"], inplace=True)
     df.reset_index(inplace=True, drop=True)
-    df["Team score"] = df['Team score'].astype(int)
-    df["Rival score"] = df['Rival score'].astype(int)
     return df
 
 
