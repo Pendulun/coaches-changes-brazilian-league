@@ -9,3 +9,5 @@ process_coaches_fired_tables:
 
 treat_coaches_fired_tables:
 	python treat_coaches_fired_tables.py
+
+all_coaches: download_coaches_fired extract_coaches_fired_tables process_coaches_fired_tables treat_coaches_fired_tables

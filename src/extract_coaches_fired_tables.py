@@ -14,7 +14,7 @@ if __name__ == "__main__":
     couldnt_find_coaches_changes_span = list()
     couldnt_find_coaches_changes_table = list()
 
-    for html_file_path in tqdm(target_htmls, desc="Processando arquivos"):
+    for html_file_path in tqdm(target_htmls, desc="Extracting html tables from html files"):
         with open(html_file_path) as target_file:
             soup = BeautifulSoup(target_file, 'html.parser')
 
@@ -35,7 +35,6 @@ if __name__ == "__main__":
 
         target_table_file = config.COACHES_FIRED_WIKIS_TABLE_PATH_FMT.format(
             year)
-        print(f"Escrevendo tabela {target_table_file}")
         with open(target_table_file, "w") as table_file:
             table_file.write(str(target_table))
 

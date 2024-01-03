@@ -81,7 +81,7 @@ if __name__ == "__main__":
     tables_htmls_paths = sorted(
         list(config.COACHES_FIRED_WIKIS_TABLE_DIR_PATH.glob("*.html")))
 
-    for table_html_path in tqdm(tables_htmls_paths):
+    for table_html_path in tqdm(tables_htmls_paths, desc="Creating csv files from html tables"):
         with open(table_html_path) as target_file:
             soup = BeautifulSoup(target_file, 'html.parser')
 

@@ -7,7 +7,7 @@ if __name__ == "__main__":
     config.COACHES_FIRED_WIKIS_DOWNLOAD_DIR_PATH.mkdir(parents=True, exist_ok=True)
 
     request_errors = list()
-    for year in tqdm(config.TARGET_YEARS, desc="requests feitos"):
+    for year in tqdm(config.TARGET_YEARS, desc="Downloading target htmls"):
         target_link = config.COACHES_WIKI_LINK_FMT.format(year)
         response = requests.get(target_link)
 
@@ -18,7 +18,6 @@ if __name__ == "__main__":
         html = response.content
 
         target_file_path = config.COACHES_FIRED_WIKIS_DOWNLOAD_PATH_FMT.format(year)
-        print(f"Escrevendo {target_file_path}")
         with open(target_file_path, 'wb') as target_file:
             target_file.write(html)
 
